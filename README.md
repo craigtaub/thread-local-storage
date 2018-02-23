@@ -1,3 +1,5 @@
+### Arch
+
 start-time
 create empty process.namespaces = {}
 
@@ -24,3 +26,7 @@ addAsyncListener.before - next tick
 
 addAsyncListener.after - finished tick 
   namespace.exit(storage) - see above
+
+### How is it CLS?
+https://www.npmjs.com/package/continuation-local-storage
+https://www.npmjs.com/package/async-listener
