@@ -1,0 +1,15 @@
+{
+  "name": "cls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "setup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-listener": "^0.6.9",
+    "continuation-local-storage": "^3.2.1"
+  }
+}
