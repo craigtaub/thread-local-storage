@@ -1,8 +1,14 @@
-var getNamespace = require('./namespace').getNamespace;
-var session = getNamespace('my session');
+var session = require('./newspace');
 
 module.exports = () => {
-  console.log('get user', session.get('user') );
-  console.log('get init', session.get('init') );
-  console.log('RENDER');
+  // console.log('get param', session.get('param') );
+  
+  // console.log('RENDER');
+  const response = session.get('response');
+  // console.log('done?', response.done); // if 2nd request using 1st request obj this will b true
+  response.done = true;
+  response.writeHead(200, {'Content-type':'text/plan'});
+  response.write(`Param: ${session.get('param')} \n`);
+  response.write(`User: ${session.get('user')} \n`);
+  response.end();
 }
