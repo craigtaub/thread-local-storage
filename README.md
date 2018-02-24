@@ -7,11 +7,11 @@ Basically using single-thread model to use single instance of object to retain t
   - add listeners
 
 - new request
-  - SYNC - calls callback, adds async to queue, addAsyncListener.exit clears namespace
-  - when adds to queue addAsyncListener.create hands current namespace
+  - SYNC - calls callback, adds async to queue, addAsyncListener.exit clears storage
+  - when adds to queue addAsyncListener.create hands current storage
 
 - Event loop
-  - addAsyncListener.before assigns handed context to current namespace
+  - addAsyncListener.before assigns handed context to current storage
 
 ### CLS arch
 ```
