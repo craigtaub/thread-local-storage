@@ -6,21 +6,20 @@ const namespace = {
   set: (key, val) => {
     namespace.active[key] = val;
   },
-  get: (key) => namespace.active[key]
+  get: (key) => namespace.active[key],
+  listen: process.addAsyncListener({
+    create: () => namespace.active,
+    before: (context, storage) => { 
+      if (storage) {
+        namespace.active = storage;
+      }
+    },
+    after: (context, storage) => { 
+      if (storage) {
+        namespace.active = {};
+      }
+    }
+  })
 };
-
-namespace.id = process.addAsyncListener({
-  create: () => namespace.active,
-  before: (context, storage) => { 
-    if (storage) {
-      namespace.active = storage;
-    }
-  },
-  after: (context, storage) => { 
-    if (storage) {
-      namespace.active = {};
-    }
-  }
-});
 
 module.exports = namespace;
