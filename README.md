@@ -4,7 +4,7 @@
   - SYNC - calls callback, adds async to queue, addAsyncListener.exit clears namespace
   - when adds to queue addAsyncListener.create hands current namespace
 
--  event loop
+- Event loop
   - addAsyncListener.before assigns handed context to current namespace
 
 ### Initial Arch
