@@ -3,7 +3,6 @@ if (!process.addAsyncListener) require('async-listener');
 
 const namespace = {
   active: {},
-  run: (cb) => cb(),
   set: (key, val) => {
     namespace.active[key] = val;
   },

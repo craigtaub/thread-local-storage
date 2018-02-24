@@ -1,5 +1,11 @@
 
-### New arch
+Basically using single-thread model to use single instance of object to retain thread-storage.
+
+### This arch
+- start-time
+  - init namespace object
+  - add listeners
+
 - new request
   - SYNC - calls callback, adds async to queue, addAsyncListener.exit clears namespace
   - when adds to queue addAsyncListener.create hands current namespace
@@ -7,7 +13,7 @@
 - Event loop
   - addAsyncListener.before assigns handed context to current namespace
 
-### Initial Arch
+### CLS arch
 ```
 start-time
 create empty process.namespaces = {}

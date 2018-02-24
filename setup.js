@@ -20,9 +20,7 @@ var params=function(req){
 http.createServer(function(request, response){
   const param = params(request).name;
 
-  session.run(() => {
-    start(param, response);
-  });
+  start(param, response);
 
 }).listen(7000);
 
