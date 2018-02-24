@@ -1,5 +1,5 @@
-var session = require('./newspace');
-var finish = require('./setup_two'); 
+var session = require('./tls');
+var finish = require('./test-2'); 
 
 var http = require('http');
 
@@ -28,7 +28,7 @@ const fetchUserById = (param) => {
 
   return new Promise((res, rej) => {
     setTimeout(() => {
-      res(`ajax: ${param}`)
+      res(`${param}`)
     }, 3000)
   })
   // return Promise.resolve(`ajax: param`); // ${process.argv[2]}

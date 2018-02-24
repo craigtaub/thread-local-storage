@@ -13,6 +13,8 @@ Basically using single-thread model to use single instance of object to retain t
 - Event loop
   - addAsyncListener.before assigns handed context to current storage
 
+Works for nested async.
+
 ### CLS arch
 ```
 start-time
