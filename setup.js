@@ -47,9 +47,7 @@ function start(param, response) {
     // console.log('set user', user);
     session.set('user', user);
     finish();
-  }).catch(err => {
-    // console.log('err', err)
-  })
+  });
   // console.log('SYNC END');
 }
  

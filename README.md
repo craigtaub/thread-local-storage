@@ -1,5 +1,14 @@
-### Arch
 
+### New arch
+- new request
+  - SYNC - calls callback, adds async to queue, addAsyncListener.exit clears namespace
+  - when adds to queue addAsyncListener.create hands current namespace
+
+-  event loop
+  - addAsyncListener.before assigns handed context to current namespace
+
+### Initial Arch
+```
 start-time
 create empty process.namespaces = {}
 
@@ -26,6 +35,7 @@ addAsyncListener.before - next tick
 
 addAsyncListener.after - finished tick 
   namespace.exit(storage) - see above
+```
 
 ### How is it CLS?
 https://www.npmjs.com/package/continuation-local-storage
